@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import AbsoluteWrapper from './AbsoluteWrapper';
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <AbsoluteWrapper>
+      <div>
+        Home
+      </div>
+    </AbsoluteWrapper>
   )
 }
 

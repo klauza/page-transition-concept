@@ -1,10 +1,13 @@
 import React from 'react'
+import AbsoluteWrapper from './AbsoluteWrapper';
 
 const PageOne = () => {
   return (
-    <div style={{background: 'orange'}}>
-      1
-    </div>
+    <AbsoluteWrapper>
+      <div style={{background: 'orange', height: '100vh'}}>
+        1
+      </div>
+    </AbsoluteWrapper>
   )
 }
 

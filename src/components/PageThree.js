@@ -1,10 +1,13 @@
 import React from 'react'
+import AbsoluteWrapper from './AbsoluteWrapper';
 
 const PageThree = () => {
   return (
-    <div style={{background: 'lightgreen'}}>
-      3
-    </div>
+    <AbsoluteWrapper>
+      <div style={{background: 'lightgreen', height: '100vh'}}>
+        3
+      </div>
+    </AbsoluteWrapper>
   )
 }
 
