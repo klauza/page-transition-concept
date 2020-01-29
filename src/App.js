@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import './App.css';
 import { Switch, Route, __RouterContext } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
 
 // nav
-import Navbar from './components/Navbar';
+import Navbar from './components/Navigation/Navbar';
+// footer
+import Footer from './components/Footer/Footer';
+// notFound
+import NotFound from './components/NotFound/NotFound';
 
 // pages
 import Home from './components/Home';
@@ -22,24 +25,26 @@ function App() {
   });
 
   return (
-    <>
-      <div className="App"> 
+    <React.Fragment>
+   
       <Navbar />
 
-        {transitions.map(({item, props, key}) => (
-          <animated.div key={key} style={props}>
-            <Switch location={item}>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/page-one" component={PageOne} />
-              <Route exact path="/page-two" component={PageTwo} />
-              <Route exact path="/page-three" component={PageThree} />
+      {transitions.map(({item, props, key}) => (
+        <animated.div key={key} style={props}>
+          <Switch location={item}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/page-one" component={PageOne} />
+            <Route exact path="/page-two" component={PageTwo} />
+            <Route exact path="/page-three" component={PageThree} />
 
-            </Switch>
-          </animated.div>
-        ))}
-          
-      </div>
-    </>
+            <Route component={NotFound} />
+          </Switch>
+        </animated.div>
+      ))}
+      
+      <Footer />
+
+    </React.Fragment>
   );
 }
 

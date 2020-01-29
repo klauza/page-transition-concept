@@ -4,7 +4,7 @@ import { AbsoluteWrapper } from './reusable';
 const PageTwo = () => {
   return (
     <AbsoluteWrapper>
-      <div style={{background: 'lightgrey', height: '100vh'}}>
+      <div style={{background: 'lightgrey'}}>
         2
       </div>
     </AbsoluteWrapper>
