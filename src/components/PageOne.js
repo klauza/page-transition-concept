@@ -1,7 +1,9 @@
 import React from 'react'
-import AbsoluteWrapper from './AbsoluteWrapper';
+import { AbsoluteWrapper } from './reusable';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
+import Toggle from './Toggle';
+
 
 const Front = styled(animated.div)`
   background: yellow;
@@ -26,6 +28,9 @@ const PageOne = () => {
       <Front style={fade}>
         1
       </Front>
+      <main>
+        <Toggle />
+      </main>
     </AbsoluteWrapper>
   )
 }
