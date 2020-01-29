@@ -1,5 +1,5 @@
 import React from 'react';
-import AbsoluteWrapper from './AbsoluteWrapper';
+import { AbsoluteWrapper } from './reusable';
 
 const Home = () => {
   return (
