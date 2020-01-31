@@ -15,6 +15,8 @@ import PageOne from './components/PageOne';
 import PageTwo from './components/PageTwo';
 import PageThree from './components/PageThree';
 
+// Swiping functionality
+import SwipeMobile from './components/reusable/SwipeMobile';
 function App() {
 
   const { location } = useContext(__RouterContext);
@@ -28,19 +30,22 @@ function App() {
     <React.Fragment>
    
       <Navbar />
+      <SwipeMobile>
 
-      {transitions.map(({item, props, key}) => (
-        <animated.div key={key} style={props}>
-          <Switch location={item}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/page-one" component={PageOne} />
-            <Route exact path="/page-two" component={PageTwo} />
-            <Route exact path="/page-three" component={PageThree} />
+        {transitions.map(({item, props, key}) => (
+          <animated.div key={key} style={props}>
+            <Switch location={item}>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/page-one" component={PageOne} />
+              <Route exact path="/page-two" component={PageTwo} />
+              <Route exact path="/page-three" component={PageThree} />
 
-            <Route component={NotFound} />
-          </Switch>
-        </animated.div>
-      ))}
+              <Route component={NotFound} />
+            </Switch>
+          </animated.div>
+        ))}
+
+      </SwipeMobile>
       
       <Footer />
 
