@@ -1,4 +1,4 @@
-React page with route transition concept with delay gap to fetch data.
+React page with route transition concept with delay and lock gap to fetch next data.
 
 Technology:
 
