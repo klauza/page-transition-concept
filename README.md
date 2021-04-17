@@ -1,4 +1,4 @@
-React templating project
+React page with route transition concept with delay gap to fetch data.
 
 Technology:
 
